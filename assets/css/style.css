@@ -28,6 +28,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 0 10px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 19px;
 }
 
 .title{
@@ -37,20 +40,54 @@ body{
     margin-bottom: 35px;
 }
 
-.input-wrapper{
-    text-align: center;
-    margin-right: 40px;
-}
-
 .paper-container{
-    width: 600px;
     background-image: url(../img/paper.jpg);
     border-radius: 20px;
-    padding: 20px 0 20px 40px;
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.input-wrapper{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.cta_add{
+    font-size: 15px;
+    border: none;
+    padding: 5px 7px;
+    border-radius: 50%;
+    background-color: #4ea879;
+    cursor: pointer;
+    color: white;
+}
+
+.input-text{
+    border-radius: 999px;
+    font-size: 19px;
+    padding: 5px 10px;
 }
 
 .list-wrapper{
     height: 600px;
     overflow-y: scroll;
+}
+
+.list-wrapper li{
+    max-width: 600px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 8px 0;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
 }
