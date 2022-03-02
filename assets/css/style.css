@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 /* FONT */
@@ -19,6 +20,10 @@
     margin-top: 20px;
     border-radius: 5px;
     background: #909090;
+}
+
+ul, li {
+    list-style: none;
 }
 
 body{
@@ -48,6 +53,9 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    width: 600px;
+    height: 600px;
+    overflow-x: hidden;
 }
 
 .input-wrapper{
@@ -68,6 +76,10 @@ body{
     color: white;
 }
 
+.cta_add:hover{
+    background-color: orange;
+}
+
 .input-text{
     border-radius: 999px;
     font-size: 19px;
@@ -75,19 +87,41 @@ body{
 }
 
 .list-wrapper{
-    height: 600px;
     overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.list-wrapper li{
-    max-width: 600px;
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.todo{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-    padding: 8px 0;
     padding-left: 20px;
     border-bottom: 1px solid black;
+    gap: 10px;
+}
+
+.todo > *{
     cursor: pointer;
+}
+
+.toDone p{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width:620px){
+    .paper-container{
+        width: calc(100vw - 20px);
+    }
+    .input-text{
+        font-size: 15px;
+    }    
 }

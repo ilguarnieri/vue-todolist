@@ -18,18 +18,16 @@
     <section id="app">
         <div class="paper-container">
             <div class="input-wrapper">
-                <input type="text" class="input-text">
-                <button class="cta_add"><i class="fas fa-plus"></i></button>
+                <input type="text" class="input-text" v-model="newTodo" @keyup.enter="addTodo">
+                <button class="cta_add"><i class="fas fa-plus" @click="addTodo"></i></button>
             </div>
 
             <div class="list-wrapper">
-                <ul>
-                    <li>Lorem, ipsum.<i class="fas fa-times"></i></li>
-                    <li>Lorem ipsum dolor sit.<i class="fas fa-times"></i></li>
-                    <li>Lorem, ipsum.<i class="fas fa-times"></i></li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.<i class="fas fa-times"></i></li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur quibusdam rerum quam ad impedit laboriosam quia voluptatum hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur quibusdam rerum quam ad impedit laboriosam quia voluptatum hic officia.<i class="fas fa-times"></i></li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur quibusdam rerum quam ad impedit laboriosam quia voluptatum hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur quibusdam rerum quam ad impedit laboriosam quia voluptatum hic officia.<i class="fas fa-times"></i></li>
+                <ul class="todo-list">
+                    <li v-for="(element, index) in todoList" :class="['todo', element.done ? 'toDone' : '']">
+                        <p @click="changeDone(index)">{{ element.text }}</p>
+                        <i class="fas fa-times" @click="deleteTodo(index)"></i>
+                    </li>
                 </ul>
             </div>
 
