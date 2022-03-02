@@ -34,12 +34,12 @@ body{
     align-items: center;
     height: 100vh;
     padding: 0 10px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Gloria Hallelujah', cursive, 'Times New Roman';
     font-size: 19px;
 }
 
 .title{
-    font-family: "Fresh Lychee";
+    font-family: "Fresh Lychee", 'Times New Roman';
     color: white;
     font-size: min(80px, 25vw);
     margin-bottom: 35px;
